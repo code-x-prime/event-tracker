@@ -127,57 +127,95 @@ function thankYouHTML(name: string) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Thank You — Event Tracker</title>
 </head>
-<body style="margin:0;padding:0;background:#F7F9F7;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#F7F9F7;padding:40px 0;">
-  <tr><td align="center">
-    <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+<body style="margin:0;padding:0;background:#F0F4F0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#F0F4F0;padding:48px 16px;">
+  <tr><td align="center" valign="top">
+    <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;background:#ffffff;border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.10);">
 
-      <!-- Header gradient -->
+      <!-- Header -->
       <tr>
-        <td style="background:linear-gradient(90deg,#2B9E7C,#8AC63F);padding:32px 40px;text-align:center;">
-          <span style="font-size:28px;font-weight:800;color:#ffffff;">event</span>
-          <span style="display:block;font-size:9px;font-weight:500;color:rgba(255,255,255,0.8);letter-spacing:4px;text-transform:uppercase;margin-top:3px;">TRACKER</span>
+        <td align="center" style="background:linear-gradient(90deg,#2B9E7C,#8AC63F);padding:36px 40px 32px;">
+          <table cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center">
+                <span style="font-size:30px;font-weight:800;color:#ffffff;letter-spacing:-1px;">event</span><br/>
+                <span style="font-size:8px;font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:5px;text-transform:uppercase;">TRACKER</span>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
 
-      <!-- Checkmark -->
+      <!-- Checkmark circle — table-based for email clients -->
       <tr>
-        <td align="center" style="padding:36px 40px 8px;">
-          <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#2B9E7C,#8AC63F);display:inline-flex;align-items:center;justify-content:center;font-size:28px;color:#fff;line-height:64px;text-align:center;">✓</div>
+        <td align="center" style="padding:40px 40px 8px;">
+          <table cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" valign="middle"
+                  width="72" height="72"
+                  style="width:72px;height:72px;border-radius:36px;background:linear-gradient(135deg,#2B9E7C,#8AC63F);text-align:center;vertical-align:middle;">
+                <span style="font-size:32px;color:#ffffff;line-height:72px;font-weight:700;">&#10003;</span>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
 
       <!-- Body -->
       <tr>
-        <td style="padding:16px 40px 36px;text-align:center;">
-          <h1 style="margin:0 0 12px;font-size:26px;font-weight:700;color:#1A1A1A;">Thank You, ${name}!</h1>
-          <p style="margin:0 0 20px;font-size:15px;color:#555555;line-height:1.7;">
-            Your enquiry has been received. Our team will review your requirements and get back to you within <strong style="color:#2B9E7C;">24 hours</strong>.
+        <td align="center" style="padding:20px 48px 40px;">
+          <h1 style="margin:0 0 14px;font-size:28px;font-weight:800;color:#1A1A1A;text-align:center;">
+            Thank You, ${name}!
+          </h1>
+          <p style="margin:0 0 28px;font-size:15px;color:#666666;line-height:1.8;text-align:center;max-width:400px;">
+            Your enquiry has been received. Our team will review your requirements and get back to you within&nbsp;<strong style="color:#2B9E7C;">24&nbsp;hours</strong>.
           </p>
 
-          <!-- Info box -->
-          <table width="100%" cellpadding="0" cellspacing="0" style="background:#F7F9F7;border-radius:12px;border:1.5px solid #E2EAE2;margin-bottom:28px;">
+          <!-- Contact box -->
+          <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;border-radius:14px;overflow:hidden;border:1.5px solid #E2EAE2;">
             <tr>
-              <td style="padding:20px 24px;text-align:center;">
-                <p style="margin:0 0 6px;font-size:13px;color:#888;">In the meantime, reach us directly:</p>
-                <a href="tel:+919594422056" style="font-size:16px;font-weight:700;color:#2B9E7C;text-decoration:none;">+91 95944 22056</a>
-                <span style="color:#ccc;margin:0 10px;">|</span>
-                <a href="mailto:info@eventtracker.in" style="font-size:16px;font-weight:700;color:#2B9E7C;text-decoration:none;">info@eventtracker.in</a>
+              <td align="center" style="background:#F7F9F7;padding:22px 24px;">
+                <p style="margin:0 0 10px;font-size:12px;color:#999999;text-transform:uppercase;letter-spacing:1px;">In the meantime, reach us directly</p>
+                <table cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" style="padding:0 12px;border-right:1px solid #E2EAE2;">
+                      <a href="tel:+919594422056" style="font-size:15px;font-weight:700;color:#2B9E7C;text-decoration:none;white-space:nowrap;">+91 95944 22056</a>
+                    </td>
+                    <td align="center" style="padding:0 12px;">
+                      <a href="mailto:info@eventtracker.in" style="font-size:15px;font-weight:700;color:#2B9E7C;text-decoration:none;white-space:nowrap;">info@eventtracker.in</a>
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
           </table>
 
-          <a href="https://www.eventtracker.in/services" style="display:inline-block;background:linear-gradient(90deg,#2B9E7C,#8AC63F);color:#fff;font-size:14px;font-weight:600;padding:14px 28px;border-radius:50px;text-decoration:none;">
-            Explore Our Services →
-          </a>
+          <!-- CTA button -->
+          <table cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" style="border-radius:50px;background:linear-gradient(90deg,#2B9E7C,#8AC63F);">
+                <a href="https://www.eventtracker.in/services"
+                   style="display:inline-block;padding:15px 32px;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:50px;letter-spacing:0.3px;">
+                  Explore Our Services &rarr;
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- Divider -->
+      <tr>
+        <td style="padding:0 40px;">
+          <div style="height:1px;background:#E2EAE2;"></div>
         </td>
       </tr>
 
       <!-- Footer -->
       <tr>
-        <td style="background:#1A1A1A;padding:20px 40px;">
-          <p style="margin:0;font-size:12px;color:rgba(255,255,255,0.4);text-align:center;">
-            Event Tracker · Mumbai, Maharashtra · Exhibition &amp; Event Infrastructure
+        <td align="center" style="background:#1A1A1A;padding:22px 40px;">
+          <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.45);text-align:center;letter-spacing:0.3px;">
+            Event Tracker &nbsp;&middot;&nbsp; Mumbai, Maharashtra &nbsp;&middot;&nbsp; Exhibition &amp; Event Infrastructure
           </p>
         </td>
       </tr>

@@ -3,25 +3,45 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --teal:     #2B9E7C;
+  --green:    #8AC63F;
+  --dark:     #1A1A1A;
+  --charcoal: #2D2D2D;
+  --light:    #F7F9F7;
+  --border:   #E2EAE2;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
+  color: #2D2D2D;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, #2B9E7C, #8AC63F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(90deg, #2B9E7C, #8AC63F);
+  }
+
+  .gradient-border {
+    border: 1.5px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(90deg, #2B9E7C, #8AC63F) border-box;
   }
 }

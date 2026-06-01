@@ -39,12 +39,11 @@ const QUICK_LINKS = [
 ];
 
 const SERVICES = [
-  'Shell Scheme Solutions',
-  'Furniture Rental',
-  'Carpeting Services',
-  'Branding & Graphics',
-  'Temporary Staffing',
-  'Product Display Solutions',
+  'Custom Fabrications & Production',
+  'Auxiliary Area',
+  'Conference Services',
+  'Rental — AV & Furniture',
+  'Design & Layout',
 ];
 
 const SOCIALS = [

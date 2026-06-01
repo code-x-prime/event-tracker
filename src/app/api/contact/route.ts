@@ -35,14 +35,13 @@ function adminHTML(data: {
 
       <!-- Header -->
       <tr>
-        <td style="background:linear-gradient(90deg,#2B9E7C,#8AC63F);padding:32px 40px;">
+        <td style="background:linear-gradient(90deg,#2B9E7C,#8AC63F);padding:28px 40px;">
           <table width="100%" cellpadding="0" cellspacing="0">
             <tr>
-              <td>
-                <span style="font-size:26px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;">event</span>
-                <span style="display:block;font-size:9px;font-weight:500;color:rgba(255,255,255,0.8);letter-spacing:4px;text-transform:uppercase;margin-top:2px;">TRACKER</span>
+              <td valign="middle">
+                <img src="https://www.eventtracker.in/logo.png" alt="Event Tracker" height="44" style="display:block;height:44px;width:auto;" />
               </td>
-              <td align="right">
+              <td align="right" valign="middle">
                 <span style="background:rgba(255,255,255,0.2);color:#fff;font-size:11px;font-weight:600;padding:6px 14px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;">New Enquiry</span>
               </td>
             </tr>
@@ -134,15 +133,8 @@ function thankYouHTML(name: string) {
 
       <!-- Header -->
       <tr>
-        <td align="center" style="background:linear-gradient(90deg,#2B9E7C,#8AC63F);padding:36px 40px 32px;">
-          <table cellpadding="0" cellspacing="0">
-            <tr>
-              <td align="center">
-                <span style="font-size:30px;font-weight:800;color:#ffffff;letter-spacing:-1px;">event</span><br/>
-                <span style="font-size:8px;font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:5px;text-transform:uppercase;">TRACKER</span>
-              </td>
-            </tr>
-          </table>
+        <td align="center" style="background:linear-gradient(90deg,#2B9E7C,#8AC63F);padding:28px 40px;">
+          <img src="https://www.eventtracker.in/logo.png" alt="Event Tracker" height="48" style="display:block;height:48px;width:auto;margin:0 auto;" />
         </td>
       </tr>
 

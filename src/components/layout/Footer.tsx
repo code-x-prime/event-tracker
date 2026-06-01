@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Phone, Mail, Globe } from 'lucide-react';
 
 function IconInstagram({ size = 15 }: { size?: number }) {
@@ -69,24 +70,15 @@ export function Footer() {
 
           {/* Brand */}
           <div>
-            <Link href="/" className="flex flex-col leading-none select-none mb-5 w-fit">
-              <span
-                className="font-display font-bold text-2xl"
-                style={{
-                  background: 'linear-gradient(90deg,#2B9E7C,#8AC63F)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                event
-              </span>
-              <span
-                className="font-sans font-medium text-[0.55rem] uppercase"
-                style={{ letterSpacing: '0.35em', color: 'rgba(255,255,255,0.6)' }}
-              >
-                TRACKER
-              </span>
+            <Link href="/" className="inline-flex select-none mb-5">
+              <Image
+                src="/logo-w.png"
+                alt="Event Tracker"
+                width={130}
+                height={48}
+                className="object-contain"
+                style={{ height: '65px', width: 'auto' }}
+              />
             </Link>
             <p
               className="font-sans text-sm leading-relaxed mb-6"

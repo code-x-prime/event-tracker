@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { ChevronRight, Menu, X } from 'lucide-react';
 
@@ -29,7 +30,6 @@ export function Navbar() {
   }, [pathname]);
 
   const linkColor = scrolled ? '#2D2D2D' : '#ffffff';
-  const trackerColor = scrolled ? '#2D2D2D' : '#ffffff';
 
   return (
     <header
@@ -45,24 +45,20 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-none select-none">
-            <span
-              className="font-display font-bold text-2xl"
+          <Link href="/" className="flex items-center select-none">
+            <Image
+              src={"/logo.png"}
+              alt="Event Tracker"
+              width={140}
+              height={52}
+              className="object-contain transition-all duration-500"
               style={{
-                background: 'linear-gradient(90deg,#2B9E7C,#8AC63F)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+
+                height: '60px',
+                width: 'auto',
               }}
-            >
-              event
-            </span>
-            <span
-              className="font-sans font-medium text-[0.55rem] uppercase transition-colors duration-500"
-              style={{ letterSpacing: '0.35em', color: trackerColor }}
-            >
-              TRACKER
-            </span>
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}

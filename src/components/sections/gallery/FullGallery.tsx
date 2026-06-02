@@ -1,25 +1,39 @@
 'use client';
 
-import { useState } from 'react';
-import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import { IconMaximize } from '@tabler/icons-react';
 import { ImageLightbox } from '@/components/ui/ImageLightbox';
 import { GALLERY_IMAGES } from '@/lib/image-index';
+import { MasonryGrid } from '@/components/ui/image-testimonial-grid';
 
 export default function FullGallery() {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+  const [columns, setColumns] = useState(3);
 
-  // List of image paths
   const imagesList: string[] = [...GALLERY_IMAGES];
+
+  // Determine column layout based on screen width
+  const getColumns = (width: number) => {
+    if (width < 640) return 1;    // sm: single column for mobile
+    if (width < 1024) return 2;   // md/lg: two columns for tablet
+    return 3;                     // xl and up: three columns for desktop
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setColumns(getColumns(window.innerWidth));
+    };
+
+    handleResize(); // Set initial columns on mount
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <section className="bg-white py-14 md:py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Gallery grid */}
-        <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
-          style={{ gridAutoRows: '240px' }}
-        >
+        <MasonryGrid columns={columns} gap={5}>
           {imagesList.map((src, idx) => (
             <GalleryCard
               key={idx}
@@ -27,7 +41,7 @@ export default function FullGallery() {
               onClick={() => setLightboxIdx(idx)}
             />
           ))}
-        </div>
+        </MasonryGrid>
       </div>
 
       {lightboxIdx !== null && (
@@ -52,9 +66,9 @@ function GalleryCard({
 
   return (
     <div
-      className="relative overflow-hidden rounded-2xl cursor-pointer group"
+      className="relative overflow-hidden rounded-2xl cursor-pointer group mb-5"
       style={{
-        height: '100%',
+        width: '100%',
         transform: hovered ? 'scale(1.02)' : 'scale(1)',
         transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
         boxShadow: hovered ? '0 12px 30px rgba(0, 0, 0, 0.15)' : 'none',
@@ -63,14 +77,11 @@ function GalleryCard({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <Image
+      <img
         src={src}
         alt="Event Setup"
-        fill
-        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         loading="lazy"
-        quality={80}
       />
       
       {/* Visual Hover Overlay (zoom icon only, no text) */}

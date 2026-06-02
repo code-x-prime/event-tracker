@@ -1,10 +1,10 @@
 'use client';
 
-import { Suspense, useState } from 'react';
-import Image from 'next/image';
+import { Suspense, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { IconArrowRight, IconMaximize } from '@tabler/icons-react';
 import { ImageLightbox } from '@/components/ui/ImageLightbox';
+import { MasonryGrid } from '@/components/ui/image-testimonial-grid';
 
 // 8 visually distinct images for home preview
 const HOME_IMAGES = [
@@ -24,6 +24,25 @@ const IMAGES = GALLERY_ITEMS.map((i) => i.img);
 
 export default function GalleryGrid() {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+  const [columns, setColumns] = useState(3);
+
+  // Determine columns based on screen width
+  const getColumns = (width: number) => {
+    if (width < 640) return 1;    // sm: single column for mobile
+    if (width < 1024) return 2;   // md/lg: two columns for tablet
+    return 3;                     // xl and up: three columns for desktop
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setColumns(getColumns(window.innerWidth));
+    };
+
+    handleResize(); // Set initial columns on mount
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <section style={{ background: '#F7F9F7' }} className="py-14 md:py-20 px-4 md:px-6">
@@ -39,13 +58,13 @@ export default function GalleryGrid() {
           </h2>
         </div>
 
-        {/* Gallery grid */}
+        {/* Gallery grid using Masonry layout */}
         <Suspense fallback={<div className="h-[420px] rounded-2xl bg-[#E2EAE2] animate-pulse" />}>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10" style={{ gridAutoRows: '200px' }}>
+          <MasonryGrid columns={columns} gap={8}>
             {GALLERY_ITEMS.map((item, i) => (
-              <GalleryCard key={i} {...item} eager={i < 4} onClick={() => setLightboxIdx(i)} />
+              <GalleryCard key={i} img={item.img} onClick={() => setLightboxIdx(i)} />
             ))}
-          </div>
+          </MasonryGrid>
         </Suspense>
 
         {/* Bottom link */}
@@ -76,24 +95,18 @@ export default function GalleryGrid() {
 
 function GalleryCard({
   img,
-  colSpan = '',
-  rowSpan = '',
   onClick,
-  eager = false,
 }: {
   img: string;
-  colSpan?: string;
-  eager?: boolean;
-  rowSpan?: string;
   onClick: () => void;
 }) {
   const [hovered, setHovered] = useState(false);
 
   return (
     <div
-      className={`relative overflow-hidden rounded cursor-pointer ${colSpan} ${rowSpan}`}
+      className="relative overflow-hidden rounded-2xl cursor-pointer group mb-6"
       style={{
-        minHeight: '220px',
+        width: '100%',
         transform: hovered ? 'scale(1.02)' : 'scale(1)',
         transition: 'transform 0.35s ease',
       }}
@@ -101,14 +114,11 @@ function GalleryCard({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <Image
+      <img
         src={img}
         alt="Event Tracker project"
-        fill
-        className="object-cover"
-        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw"
-        loading={eager ? 'eager' : 'lazy'}
-        quality={70}
+        className="w-full h-auto object-cover"
+        loading="lazy"
       />
       <div
         className="absolute inset-0 flex items-center justify-center transition-opacity duration-300"

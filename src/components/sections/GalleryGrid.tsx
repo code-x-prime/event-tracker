@@ -29,7 +29,7 @@ const SPANS = [
   { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
 ];
 
-const GALLERY_ITEMS = GALLERY_IMAGES.map((img, i) => ({ img, ...SPANS[i] }));
+const GALLERY_ITEMS = GALLERY_IMAGES.slice(0, 12).map((img, i) => ({ img, ...SPANS[i] }));
 
 const IMAGES = GALLERY_ITEMS.map((i) => i.img);
 

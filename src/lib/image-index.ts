@@ -12,7 +12,6 @@ export const GALLERY_IMAGES = [
   '/gallery/1000084971.jpg',
   '/gallery/1000084973.jpg',
   '/gallery/1000084974.jpg',
-  '/gallery/1000084982.jpg',
   '/gallery/1000084983.jpg',
   '/gallery/1000084963.jpg',
   '/gallery/1000084986.jpg',

@@ -50,6 +50,7 @@ export default function HeroSection() {
         loop
         muted
         playsInline
+        preload="none"
       />
 
       {/* Dark + green tint overlay */}

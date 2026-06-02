@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true,
+    minimumCacheTTL: 3600,
+    formats: ['image/webp'],
+    deviceSizes: [640, 1080, 1920],
+    imageSizes: [220, 440],
     remotePatterns: [
       {
         protocol: 'https',

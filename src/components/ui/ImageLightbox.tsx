@@ -96,8 +96,9 @@ export function ImageLightbox({ images, initialIndex, onClose }: Props) {
             alt="Event Tracker project"
             fill
             className="object-contain"
-            sizes="900px"
+            sizes="(max-width: 900px) 100vw, 900px"
             priority
+            quality={85}
           />
         </div>
       </div>

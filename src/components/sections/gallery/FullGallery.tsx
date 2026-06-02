@@ -22,9 +22,9 @@ const GALLERY_ITEMS = [
   { id: 12, span: 'lg:col-span-1 lg:row-span-2', img: `${BASE}/1000084974.jpg` },
   { id: 13, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084982.jpg` },
   { id: 14, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084983.jpg` },
-  { id: 15, span: 'lg:col-span-2 lg:row-span-1', img: `${BASE}/1000084986.jpg` },
-  { id: 16, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084988.jpg` },
-  { id: 17, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084963.jpg` },
+  { id: 15, span: 'lg:col-span-2 lg:row-span-1', img: `${BASE}/1000084963.jpg` },
+  { id: 16, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084986.jpg` },
+  { id: 17, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084988.jpg` },
   { id: 18, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000085004.jpg` },
   { id: 19, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000085009.jpg` },
 ];

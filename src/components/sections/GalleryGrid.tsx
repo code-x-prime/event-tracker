@@ -23,9 +23,9 @@ const GALLERY_ITEMS = [
   { img: `${BASE}/1000084974.jpg`, colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-2' },
   { img: `${BASE}/1000084982.jpg`, colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
   { img: `${BASE}/1000084983.jpg`, colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { img: `${BASE}/1000084986.jpg`, colSpan: 'lg:col-span-2', rowSpan: 'lg:row-span-1' },
+  { img: `${BASE}/1000084963.jpg`, colSpan: 'lg:col-span-2', rowSpan: 'lg:row-span-1' },
+  { img: `${BASE}/1000084986.jpg`, colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
   { img: `${BASE}/1000084988.jpg`, colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { img: `${BASE}/1000084963.jpg`, colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
   { img: `${BASE}/1000085004.jpg`, colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
   { img: `${BASE}/1000085009.jpg`, colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
 ];

@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['var(--font-playfair)', 'serif'],
-        sans:    ['var(--font-dm-sans)', 'sans-serif'],
+        display: ['var(--font-poppins)', 'sans-serif'],
+        sans:    ['var(--font-poppins)', 'sans-serif'],
       },
       colors: {
         teal:     '#2B9E7C',

@@ -16,11 +16,16 @@ html {
 }
 
 body {
-  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
   color: #2D2D2D;
   background: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fix EXIF rotation on all images */
+img {
+  image-orientation: from-image;
 }
 
 @layer utilities {

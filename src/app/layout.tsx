@@ -1,61 +1,14 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 
-const sharpGroteskDisplay = localFont({
-  src: [
-    {
-      path: './fonts/SharpGrotesk-Medium25.otf',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: './fonts/SharpGrotesk-Medium25.otf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: './fonts/SharpGrotesk-Medium25.otf',
-      weight: '800',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-playfair',
-  display: 'swap',
-});
-
-const sharpGroteskBody = localFont({
-  src: [
-    {
-      path: './fonts/SharpGrotesk-Light20.otf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: './fonts/SharpGrotesk-Light20.otf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './fonts/SharpGrotesk-Light20.otf',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: './fonts/SharpGrotesk-Light20.otf',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: './fonts/SharpGrotesk-Light20.otf',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-dm-sans',
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
   display: 'swap',
 });
 
@@ -73,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sharpGroteskDisplay.variable} ${sharpGroteskBody.variable} antialiased font-sans`}
+        className={`${poppins.variable} antialiased font-sans`}
       >
         <Navbar />
         <main>{children}</main>
@@ -83,3 +36,4 @@ export default function RootLayout({
     </html>
   );
 }
+

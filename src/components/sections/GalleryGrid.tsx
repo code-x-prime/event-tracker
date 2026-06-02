@@ -1,35 +1,24 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IconArrowRight, IconMaximize } from '@tabler/icons-react';
 import { ImageLightbox } from '@/components/ui/ImageLightbox';
-import { GALLERY_IMAGES } from '@/lib/image-index';
 
-const SPANS = [
-  { colSpan: 'lg:col-span-2', rowSpan: 'lg:row-span-2' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-2', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-2' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-2', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-2' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-2', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
-  { colSpan: 'lg:col-span-1', rowSpan: 'lg:row-span-1' },
+// 8 visually distinct images for home preview
+const HOME_IMAGES = [
+  '/gallery/1000084979.jpg',
+  '/gallery/1000084965.jpg',
+  '/gallery/1000084966.jpg',
+  '/gallery/1000084970.jpg',
+  '/gallery/1000084971.jpg',
+  '/gallery/1000084973.jpg',
+  '/gallery/1000084986.jpg',
+  '/gallery/1000084988.jpg',
 ];
 
-const GALLERY_ITEMS = GALLERY_IMAGES.slice(0, 12).map((img, i) => ({ img, ...SPANS[i] }));
+const GALLERY_ITEMS = HOME_IMAGES.map((img) => ({ img }));
 
 const IMAGES = GALLERY_ITEMS.map((i) => i.img);
 
@@ -37,7 +26,7 @@ export default function GalleryGrid() {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
 
   return (
-    <section style={{ background: '#F7F9F7' }} className="py-14 md:py-20 px-6">
+    <section style={{ background: '#F7F9F7' }} className="py-14 md:py-20 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -51,11 +40,13 @@ export default function GalleryGrid() {
         </div>
 
         {/* Gallery grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" style={{ gridAutoRows: '220px' }}>
-          {GALLERY_ITEMS.map((item, i) => (
-            <GalleryCard key={i} {...item} eager={i < 3} onClick={() => setLightboxIdx(i)} />
-          ))}
-        </div>
+        <Suspense fallback={<div className="h-[420px] rounded-2xl bg-[#E2EAE2] animate-pulse" />}>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10" style={{ gridAutoRows: '200px' }}>
+            {GALLERY_ITEMS.map((item, i) => (
+              <GalleryCard key={i} {...item} eager={i < 4} onClick={() => setLightboxIdx(i)} />
+            ))}
+          </div>
+        </Suspense>
 
         {/* Bottom link */}
         <div className="mt-10 text-center">
@@ -85,22 +76,22 @@ export default function GalleryGrid() {
 
 function GalleryCard({
   img,
-  colSpan,
-  rowSpan,
+  colSpan = '',
+  rowSpan = '',
   onClick,
   eager = false,
 }: {
   img: string;
-  colSpan: string;
+  colSpan?: string;
   eager?: boolean;
-  rowSpan: string;
+  rowSpan?: string;
   onClick: () => void;
 }) {
   const [hovered, setHovered] = useState(false);
 
   return (
     <div
-      className={`relative overflow-hidden rounded-2xl cursor-pointer ${colSpan} ${rowSpan}`}
+      className={`relative overflow-hidden rounded cursor-pointer ${colSpan} ${rowSpan}`}
       style={{
         minHeight: '220px',
         transform: hovered ? 'scale(1.02)' : 'scale(1)',
@@ -115,7 +106,7 @@ function GalleryCard({
         alt="Event Tracker project"
         fill
         className="object-cover"
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw"
         loading={eager ? 'eager' : 'lazy'}
         quality={70}
       />

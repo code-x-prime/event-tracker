@@ -1,9 +1,9 @@
-// All gallery images — local compressed versions
+// All gallery images (omitting 1000084982.jpg as it is corrupted)
 export const GALLERY_IMAGES = [
-  '/gallery/1000084979.jpg',
   '/gallery/1000084960.jpg',
   '/gallery/1000084961.jpg',
   '/gallery/1000084962.jpg',
+  '/gallery/1000084963.jpg',
   '/gallery/1000084965.jpg',
   '/gallery/1000084966.jpg',
   '/gallery/1000084967.jpg',
@@ -12,8 +12,8 @@ export const GALLERY_IMAGES = [
   '/gallery/1000084971.jpg',
   '/gallery/1000084973.jpg',
   '/gallery/1000084974.jpg',
+  '/gallery/1000084979.jpg',
   '/gallery/1000084983.jpg',
-  '/gallery/1000084963.jpg',
   '/gallery/1000084986.jpg',
   '/gallery/1000084988.jpg',
   '/gallery/1000085004.jpg',

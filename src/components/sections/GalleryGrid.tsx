@@ -52,7 +52,7 @@ export default function GalleryGrid() {
         {/* Gallery grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" style={{ gridAutoRows: '220px' }}>
           {GALLERY_ITEMS.map((item, i) => (
-            <GalleryCard key={i} {...item} onClick={() => setLightboxIdx(i)} />
+            <GalleryCard key={i} {...item} eager={i < 3} onClick={() => setLightboxIdx(i)} />
           ))}
         </div>
 
@@ -87,9 +87,11 @@ function GalleryCard({
   colSpan,
   rowSpan,
   onClick,
+  eager = false,
 }: {
   img: string;
   colSpan: string;
+  eager?: boolean;
   rowSpan: string;
   onClick: () => void;
 }) {
@@ -113,7 +115,7 @@ function GalleryCard({
         fill
         className="object-cover"
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        loading="lazy"
+        loading={eager ? 'eager' : 'lazy'}
         quality={70}
       />
       <div

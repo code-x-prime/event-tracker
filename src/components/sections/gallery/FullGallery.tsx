@@ -4,30 +4,31 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { IconMaximize } from '@tabler/icons-react';
 import { ImageLightbox } from '@/components/ui/ImageLightbox';
+import { GALLERY_IMAGES } from '@/lib/image-index';
 
-const BASE = 'https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/ecomdata/products/event-traker';
-
-const GALLERY_ITEMS = [
-  { id: 1, span: 'lg:col-span-2 lg:row-span-2', img: `${BASE}/1000084979.jpg` },
-  { id: 2, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084960.jpg` },
-  { id: 3, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084961.jpg` },
-  { id: 4, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084962.jpg` },
-  { id: 5, span: 'lg:col-span-2 lg:row-span-1', img: `${BASE}/1000084965.jpg` },
-  { id: 6, span: 'lg:col-span-1 lg:row-span-2', img: `${BASE}/1000084966.jpg` },
-  { id: 7, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084967.jpg` },
-  { id: 8, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084968.jpg` },
-  { id: 9, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084970.jpg` },
-  { id: 10, span: 'lg:col-span-2 lg:row-span-1', img: `${BASE}/1000084971.jpg` },
-  { id: 11, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084973.jpg` },
-  { id: 12, span: 'lg:col-span-1 lg:row-span-2', img: `${BASE}/1000084974.jpg` },
-  { id: 13, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084982.jpg` },
-  { id: 14, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084983.jpg` },
-  { id: 15, span: 'lg:col-span-2 lg:row-span-1', img: `${BASE}/1000084963.jpg` },
-  { id: 16, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084986.jpg` },
-  { id: 17, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000084988.jpg` },
-  { id: 18, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000085004.jpg` },
-  { id: 19, span: 'lg:col-span-1 lg:row-span-1', img: `${BASE}/1000085009.jpg` },
+const SPANS = [
+  'lg:col-span-2 lg:row-span-2',
+  'lg:col-span-1 lg:row-span-1',
+  'lg:col-span-1 lg:row-span-1',
+  'lg:col-span-1 lg:row-span-1',
+  'lg:col-span-2 lg:row-span-1',
+  'lg:col-span-1 lg:row-span-2',
+  'lg:col-span-1 lg:row-span-1',
+  'lg:col-span-1 lg:row-span-1',
+  'lg:col-span-1 lg:row-span-1',
+  'lg:col-span-2 lg:row-span-1',
+  'lg:col-span-1 lg:row-span-1',
+  'lg:col-span-1 lg:row-span-2',
+  'lg:col-span-1 lg:row-span-1',
+  'lg:col-span-1 lg:row-span-1',
+  'lg:col-span-2 lg:row-span-1',
+  'lg:col-span-1 lg:row-span-1',
+  'lg:col-span-1 lg:row-span-1',
+  'lg:col-span-1 lg:row-span-1',
+  'lg:col-span-1 lg:row-span-1',
 ];
+
+const GALLERY_ITEMS = GALLERY_IMAGES.map((img, i) => ({ id: i + 1, img, span: SPANS[i] }));
 
 const IMAGES = GALLERY_ITEMS.map((i) => i.img);
 

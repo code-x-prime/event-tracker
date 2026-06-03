@@ -73,13 +73,19 @@ export default function TestimonialsCarousel() {
     return () => clearInterval(timer);
   }, [total]);
 
-  // Scroll track to active card
+  // Scroll track to active card (only scroll the container, not the page)
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
     const card = track.children[active] as HTMLElement;
     if (card) {
-      card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      const cardLeft = card.offsetLeft;
+      const cardWidth = card.offsetWidth;
+      const trackWidth = track.offsetWidth;
+      track.scrollTo({
+        left: cardLeft - (trackWidth / 2) + (cardWidth / 2),
+        behavior: 'smooth',
+      });
     }
   }, [active]);
 

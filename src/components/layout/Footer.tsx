@@ -23,11 +23,11 @@ const QUICK_LINKS = [
 ];
 
 const SERVICES = [
+  'Shell Scheme',
   'Custom Stall Design & Fabrication',
   'Branding & Graphics',
   'Turnkey Projects',
   'Carpeting Services',
-  'Project & Event Management',
   'Conference Setup & Management',
 ];
 
@@ -112,7 +112,7 @@ export function Footer() {
             <ul className="space-y-3">
               {SERVICES.map((s) => (
                 <li key={s}>
-                  <FooterLink href="/services">{s}</FooterLink>
+                  <FooterLink href={`/services#${s.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}>{s}</FooterLink>
                 </li>
               ))}
             </ul>

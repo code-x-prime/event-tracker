@@ -7,9 +7,23 @@ import { IconCheck, IconArrowRight } from '@tabler/icons-react';
 const SERVICES = [
   {
     number: '01',
+    svg: '/event-services/temporary-staffing.svg',
+    title: 'Shell Scheme',
+    desc: 'Standard and customized booth construction for trade shows and exhibitions — modular, fast, and professional.',
+    features: [
+      'Standard & customized octanorm stalls',
+      'Fascia board name writing & numbering',
+      'Modular panels, tables & chair setups',
+      'Speedy assembly & dismantling support',
+    ],
+    img: '/services/temporary-staffing.jpg',
+    color: '#2B9E7C',
+  },
+  {
+    number: '02',
     svg: '/event-services/exhibition-shell-scheme-solutions.svg',
     title: 'Custom Stall Design & Fabrication',
-    desc: 'Fully customized exhibition stalls designed and fabricated to your exact brand specifications. From concept sketches and 3D renders to on-site build and breakdown — we handle every detail.',
+    desc: 'Fully customized exhibition stalls designed and fabricated to your brand specifications — from concept to on-site build.',
     features: [
       'Concept design & 3D visualization',
       'Custom fabrication in any size or shape',
@@ -17,13 +31,13 @@ const SERVICES = [
       'On-site build, dressing & dismantling',
     ],
     img: '/services/exhibition-shell-scheme-solutions.jpg',
-    color: '#2B9E7C',
+    color: '#2BA896',
   },
   {
-    number: '02',
+    number: '03',
     svg: '/event-services/branding-graphics.svg',
     title: 'Branding & Graphics',
-    desc: 'End-to-end branding solutions including large-format printing, vinyl graphics, LED-lit backdrops, signage, and custom promotional displays that make your exhibition stall unmissable.',
+    desc: 'Large-format printing, vinyl graphics, LED-lit backdrops, signage, and promotional displays that make your stall unmissable.',
     features: [
       'Large format digital printing',
       'Vinyl wraps & wall graphics',
@@ -34,10 +48,10 @@ const SERVICES = [
     color: '#3BA882',
   },
   {
-    number: '03',
+    number: '04',
     svg: '/event-services/product-display-solutions.svg',
     title: 'Turnkey Projects',
-    desc: 'Complete end-to-end project delivery under one roof — from design and fabrication to logistics, on-site setup, event execution, and full dismantling. Zero hassle for the client.',
+    desc: 'Complete end-to-end project delivery — design, fabrication, logistics, setup, and dismantling all under one roof.',
     features: [
       'Single point of contact for everything',
       'Design, fabrication & logistics',
@@ -48,10 +62,10 @@ const SERVICES = [
     color: '#52B48A',
   },
   {
-    number: '04',
+    number: '05',
     svg: '/event-services/carpeting-services.svg',
     title: 'Carpeting Services',
-    desc: 'High-quality flooring and carpeting options for exhibition stands and event venues. Available in a variety of colors, textures, and finishes to match your brand and exhibition theme.',
+    desc: 'High-quality flooring and carpeting in a variety of colors, textures, and finishes to elevate your exhibition space.',
     features: [
       'Multiple colors & textures',
       'Cut & loop pile options',
@@ -62,24 +76,10 @@ const SERVICES = [
     color: '#6BBF92',
   },
   {
-    number: '05',
-    svg: '/event-services/temporary-staffing.svg',
-    title: 'Project & Event Management',
-    desc: 'Dedicated on-ground project managers and event coordinators who ensure flawless execution — from pre-event planning and vendor coordination to live event supervision and wrap-up.',
-    features: [
-      'Dedicated project manager assigned',
-      'Vendor & timeline coordination',
-      'Live on-site supervision',
-      'Post-event reporting & debrief',
-    ],
-    img: '/services/temporary-staffing.jpg',
-    color: '#82C93A',
-  },
-  {
     number: '06',
     svg: '/event-services/premium-furniture-rental.svg',
     title: 'Conference Setup & Management',
-    desc: 'Complete conference and seminar room setups — furniture, AV systems, staging, podiums, and professional on-ground management for seamless corporate and exhibition-adjacent events.',
+    desc: 'Complete conference room setups — furniture, AV, staging, and professional management for seamless events.',
     features: [
       'Conference furniture & staging',
       'AV systems & screen setup',
@@ -116,10 +116,12 @@ export default function ServicesDetailed() {
         <div className="divide-y divide-[#E2EAE2]">
           {SERVICES.map(({ number, svg, title, desc, features, img, color }, i) => {
             const isOdd = i % 2 === 0;
+            const id = title.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
             return (
               <div
                 key={number}
-                className={`py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${isOdd ? '' : 'lg:[&>*:first-child]:order-last'}`}
+                id={id}
+                className={`py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center scroll-mt-24 ${isOdd ? '' : 'lg:[&>*:first-child]:order-last'}`}
               >
                 {/* Visual card */}
                 <div

@@ -14,12 +14,12 @@ import {
 
 const SERVICES = [
   'Select a Service',
-  'Shell Scheme Solutions',
-  'Premium Furniture Rental',
-  'Carpeting Services',
+  'Shell Scheme',
+  'Custom Stall Design & Fabrication',
   'Branding & Graphics',
-  'Temporary Staffing',
-  'Product Display Solutions',
+  'Turnkey Projects',
+  'Carpeting Services',
+  'Conference Setup & Management',
   'Multiple Services / Full Setup',
 ];
 

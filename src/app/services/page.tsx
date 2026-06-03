@@ -7,7 +7,7 @@ import CTABanner from '@/components/sections/CTABanner';
 export const metadata: Metadata = {
   title: 'Services | Event Tracker — Exhibition & Event Infrastructure Mumbai',
   description:
-    'Shell scheme solutions, furniture rental, carpeting, branding & graphics, temporary staffing, and product display solutions. End-to-end exhibition services across India.',
+    'Shell scheme, custom stall design & fabrication, branding & graphics, turnkey projects, carpeting services, and conference setup & management. End-to-end exhibition services across India.',
 };
 
 export default function ServicesPage() {

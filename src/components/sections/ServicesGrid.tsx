@@ -6,7 +6,7 @@ import { IconArrowRight } from '@tabler/icons-react';
 
 const SERVICES = [
   {
-    svg: '/event-services/exhibition-shell-scheme-solutions.svg',
+    svg: '/event-services/temporary-staffing.svg',
     title: 'Shell Scheme',
     desc: 'Standard and customized booth construction for trade shows and exhibitions — modular, fast, and professional.',
     color: '#2B9E7C',
@@ -35,12 +35,12 @@ const SERVICES = [
     desc: 'High-quality flooring and carpeting in a variety of colors, textures, and finishes to elevate your exhibition space.',
     color: '#6BBF92',
   },
-  {
-    svg: '/event-services/temporary-staffing.svg',
-    title: 'Project & Event Management',
-    desc: 'On-ground project managers and event coordinators ensuring flawless execution from pre-event planning to wrap-up.',
-    color: '#7CC440',
-  },
+  // {
+  //   svg: '/event-services/temporary-staffing.svg',
+  //   title: 'Project & Event Management',
+  //   desc: 'On-ground project managers and event coordinators ensuring flawless execution from pre-event planning to wrap-up.',
+  //   color: '#7CC440',
+  // },
   {
     svg: '/event-services/premium-furniture-rental.svg',
     title: 'Conference Setup & Management',
@@ -200,7 +200,7 @@ function ServiceCard({
 
       {/* Learn more */}
       <Link
-        href="/services"
+        href={`/services#${title.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}
         className="card-learn-more inline-flex items-center gap-1 font-sans text-sm font-medium transition-all duration-300 group/link"
         style={{ color: '#2B9E7C', opacity: 0 }}
       >

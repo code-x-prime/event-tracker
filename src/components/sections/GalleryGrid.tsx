@@ -7,7 +7,7 @@ import { ImageLightbox } from '@/components/ui/ImageLightbox';
 import { MasonryGrid } from '@/components/ui/image-testimonial-grid';
 import { GALLERY_IMAGES } from '@/lib/image-index';
 
-const HOME_IMAGES = GALLERY_IMAGES.slice(0, 12);
+const HOME_IMAGES = GALLERY_IMAGES;
 
 export default function GalleryGrid() {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);

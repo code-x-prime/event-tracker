@@ -82,7 +82,7 @@ export default function HeroSection() {
           }}
         >
           <span
-            className="inline-flex items-center gap-2 px-2 md:px-4 py-2 rounded-full mb-3 md:mb-6 whitespace-nowrap"
+            className="block md:inline-flex items-center gap-2 px-2 md:px-4 py-2 rounded-full mb-3 md:mb-6 whitespace-nowrap"
             style={{
               border: '1px solid rgba(255,255,255,0.2)',
               background: 'rgba(255,255,255,0.05)',

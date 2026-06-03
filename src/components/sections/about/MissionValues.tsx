@@ -20,7 +20,7 @@ const VALUES = [
 
 export default function MissionValues() {
   return (
-    <section style={{ background: '#F7F9F7' }} className="py-14 md:py-20 px-6">
+    <section style={{ background: '#F7F9F7' }} className="py-12 md:py-16 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Mission */}

@@ -82,7 +82,7 @@ export default function ContactMain() {
   });
 
   return (
-    <section className="bg-white py-14 md:py-20 px-6">
+    <section className="bg-white py-12 md:py-16 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
 
         {/* LEFT — Form */}
@@ -249,8 +249,8 @@ export default function ContactMain() {
                 {status === 'loading' ? (
                   <>
                     <svg className="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.3)" strokeWidth="3"/>
-                      <path d="M12 2a10 10 0 0 1 10 10" stroke="#fff" strokeWidth="3" strokeLinecap="round"/>
+                      <circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.3)" strokeWidth="3" />
+                      <path d="M12 2a10 10 0 0 1 10 10" stroke="#fff" strokeWidth="3" strokeLinecap="round" />
                     </svg>
                     Sending...
                   </>

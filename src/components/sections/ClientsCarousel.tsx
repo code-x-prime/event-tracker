@@ -1,31 +1,23 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
-// ─── Client list ────────────────────────────────────────────────────────────
-// Replace these with actual client logo <img> tags once you have the files.
 const CLIENTS = [
-  { name: 'NSE', sub: 'National Stock Exchange' },
-  { name: 'IMMA', sub: 'India Metal & Mining Assoc.' },
-  { name: 'Navneet', sub: 'Education Ltd.' },
-  { name: 'Barnet', sub: 'Integrated Finance' },
-  { name: 'Ministry of Commerce', sub: 'Government of India' },
-  { name: 'Ministry of Culture', sub: 'Government of India' },
-  { name: 'NEWARCH', sub: 'Landscapes LLP' },
-  { name: 'Godrej', sub: 'Properties' },
-  { name: 'Tata', sub: 'Consultancy Services' },
-  { name: 'L&T', sub: 'Construction' },
-  { name: 'SECC', sub: 'Exhibition Centre' },
-  { name: 'IIMTF', sub: 'Mumbai' },
+  { name: 'Client 1', src: '/clients/client (1).jpeg' },
+  { name: 'Client 2', src: '/clients/client (2).jpeg' },
+  { name: 'Client 3', src: '/clients/client (3).jpeg' },
+  { name: 'Client 4', src: '/clients/client (4).jpeg' },
+  { name: 'Client 5', src: '/clients/client (5).jpeg' },
+  { name: 'Client 6', src: '/clients/client (6).jpeg' },
 ];
 
-// Duplicate for seamless infinite loop
 const TRACK = [...CLIENTS, ...CLIENTS];
 
 export default function ClientsCarousel() {
   return (
     <section
-      className="py-14 md:py-20 overflow-hidden"
+      className="py-12 md:py-16 overflow-hidden"
       style={{ background: '#FFFFFF' }}
     >
       <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
@@ -88,7 +80,7 @@ export default function ClientsCarousel() {
           }}
         >
           {TRACK.map((client, i) => (
-            <ClientCard key={i} name={client.name} sub={client.sub} />
+            <ClientCard key={i} name={client.name} src={client.src} />
           ))}
         </div>
       </div>
@@ -104,15 +96,17 @@ export default function ClientsCarousel() {
   );
 }
 
-function ClientCard({ name, sub }: { name: string; sub: string }) {
+function ClientCard({ name, src }: { name: string; src: string }) {
   return (
     <div
-      className="flex-shrink-0 flex flex-col items-center justify-center px-8 py-5 rounded-2xl select-none"
+      className="flex-shrink-0 flex items-center justify-center rounded-2xl select-none overflow-hidden"
       style={{
-        minWidth: 160,
+        width: 180,
+        height: 100,
         border: '1.5px solid #E2EAE2',
         background: '#FAFCFA',
         transition: 'box-shadow 0.2s, border-color 0.2s',
+        padding: '12px 16px',
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget as HTMLDivElement;
@@ -125,19 +119,13 @@ function ClientCard({ name, sub }: { name: string; sub: string }) {
         el.style.boxShadow = 'none';
       }}
     >
-      {/* Name styled as a logo */}
-      <span
-        className="font-display font-bold text-base tracking-tight text-center"
-        style={{ color: '#1A2B4A' }}
-      >
-        {name}
-      </span>
-      <span
-        className="font-sans text-[10px] mt-1 text-center"
-        style={{ color: '#999', maxWidth: 120 }}
-      >
-        {sub}
-      </span>
+      <Image
+        src={src}
+        alt={name}
+        width={148}
+        height={76}
+        style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+      />
     </div>
   );
 }

@@ -7,7 +7,7 @@ const TAGS = ['Shell Scheme', 'Furniture', 'Branding', 'Carpeting', 'Staffing', 
 
 export default function CompanyStory() {
   return (
-    <section className="bg-white py-14 md:py-20 px-6">
+    <section className="bg-white py-12 md:py-16 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT — Visual card */}

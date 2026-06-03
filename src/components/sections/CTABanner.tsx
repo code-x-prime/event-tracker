@@ -13,7 +13,7 @@ import {
 export default function CTABanner() {
   return (
     <section
-      className="relative overflow-hidden py-14 md:py-20 px-6"
+      className="relative overflow-hidden py-12 md:py-16 px-6"
       style={{ background: '#0f1a14' }}
     >
       {/* Decorative layers */}

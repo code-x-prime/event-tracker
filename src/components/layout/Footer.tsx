@@ -65,7 +65,7 @@ const colLabel = 'font-sans text-[0.6rem] font-semibold uppercase tracking-[0.22
 export function Footer() {
   return (
     <footer style={{ background: '#1A1A1A', color: '#fff' }}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-12 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
 
           {/* Brand */}
@@ -142,19 +142,32 @@ export function Footer() {
 
         {/* Gradient divider */}
         <div
-          className="w-full h-px mb-8"
+          className="w-full h-px mb-5"
           style={{
             background: 'linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent)',
           }}
         />
 
         {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <p className="font-sans text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
             © 2026 Event Tracker. All rights reserved.
           </p>
           <p className="font-sans text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
             Mumbai, Maharashtra — Exhibition &amp; Event Infrastructure
+          </p>
+          <p className="font-sans text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
+            Designed &amp; Developed by{' '}
+            <a
+              href="https://groxmedia.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#2B9E7C' }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = '#8AC63F')}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = '#2B9E7C')}
+            >
+              Grox Media
+            </a>
           </p>
         </div>
       </div>

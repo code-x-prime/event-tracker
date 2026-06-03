@@ -7,9 +7,15 @@ import { IconArrowRight } from '@tabler/icons-react';
 const SERVICES = [
   {
     svg: '/event-services/exhibition-shell-scheme-solutions.svg',
+    title: 'Exhibition Shell Scheme Solutions',
+    desc: 'Standard and customized booth construction for trade shows and exhibitions — modular, fast, and professional.',
+    color: '#2B9E7C',
+  },
+  {
+    svg: '/event-services/exhibition-shell-scheme-solutions.svg',
     title: 'Custom Stall Design & Fabrication',
     desc: 'Fully customized exhibition stalls designed and fabricated to your brand specifications — from concept to on-site build.',
-    color: '#2B9E7C',
+    color: '#2BA896',
   },
   {
     svg: '/event-services/branding-graphics.svg',
@@ -33,7 +39,7 @@ const SERVICES = [
     svg: '/event-services/temporary-staffing.svg',
     title: 'Project & Event Management',
     desc: 'On-ground project managers and event coordinators ensuring flawless execution from pre-event planning to wrap-up.',
-    color: '#82C93A',
+    color: '#7CC440',
   },
   {
     svg: '/event-services/premium-furniture-rental.svg',
@@ -45,7 +51,7 @@ const SERVICES = [
 
 export default function ServicesGrid() {
   return (
-    <section style={{ background: '#F7F9F7' }} className="py-14 md:py-20 px-6">
+    <section style={{ background: '#F7F9F7' }} className="py-12 md:py-16 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Section header */}
@@ -74,7 +80,7 @@ export default function ServicesGrid() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {SERVICES.map(({ svg, title, desc, color }, i) => (
             <ServiceCard
               key={title}
@@ -137,7 +143,7 @@ function ServiceCard({
 
   return (
     <div
-      className="group relative bg-white rounded-2xl p-8 transition-all duration-300 overflow-hidden"
+      className="group relative bg-white rounded-2xl p-5  transition-all duration-300 overflow-hidden"
       style={{ border: '1.5px solid #E2EAE2' }}
       onMouseEnter={(e) => {
         const el = e.currentTarget as HTMLDivElement;

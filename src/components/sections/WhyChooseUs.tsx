@@ -38,7 +38,7 @@ const STATS = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-white py-14 md:py-20 px-6 overflow-hidden">
+    <section className="bg-white py-12 md:py-16 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT — Text + Reasons */}
@@ -109,7 +109,7 @@ export default function WhyChooseUs() {
         {/* RIGHT — Stats card */}
         <div className="order-first lg:order-last">
           <div
-            className="relative overflow-hidden rounded-3xl p-7 lg:p-10"
+            className="relative overflow-hidden rounded-3xl p-5 sm:p-7 lg:p-10"
             style={{ background: 'linear-gradient(135deg,#0f1a14,#0a2018)' }}
           >
             {/* Glow */}
@@ -145,15 +145,15 @@ export default function WhyChooseUs() {
               </p>
 
               {/* 2×2 stats */}
-              <div className="grid grid-cols-2 gap-4 lg:gap-6">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
                 {STATS.map(({ number, label }) => (
                   <div
                     key={label}
-                    className="rounded-xl p-5"
+                    className="rounded-xl p-4 sm:p-5"
                     style={{ background: 'rgba(255,255,255,0.05)' }}
                   >
                     <span
-                      className="block font-display font-bold text-3xl lg:text-4xl"
+                      className="block font-display font-bold text-2xl sm:text-3xl lg:text-4xl"
                       style={{
                         background: 'linear-gradient(90deg,#2B9E7C,#8AC63F)',
                         WebkitBackgroundClip: 'text',

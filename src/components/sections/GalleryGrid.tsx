@@ -6,16 +6,16 @@ import { IconArrowRight, IconMaximize } from '@tabler/icons-react';
 import { ImageLightbox } from '@/components/ui/ImageLightbox';
 import { MasonryGrid } from '@/components/ui/image-testimonial-grid';
 
-// 8 visually distinct images for home preview
+// 8 visually distinct images for home preview (no duplicates)
 const HOME_IMAGES = [
   '/gallery/1000084979.jpg',
   '/gallery/1000084965.jpg',
-  '/gallery/1000084966.jpg',
   '/gallery/1000084970.jpg',
   '/gallery/1000084971.jpg',
   '/gallery/1000084973.jpg',
   '/gallery/1000084986.jpg',
   '/gallery/1000084988.jpg',
+  '/gallery/1000085004.jpg',
 ];
 
 const GALLERY_ITEMS = HOME_IMAGES.map((img) => ({ img }));
@@ -56,6 +56,11 @@ export default function GalleryGrid() {
           <h2 className="font-display font-bold text-3xl lg:text-5xl mt-2" style={{ color: '#1A1A1A' }}>
             Exhibition Setups That Speak Volumes
           </h2>
+          <div className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full" style={{ background: 'linear-gradient(135deg, #1A2B4A 0%, #0D1B30 100%)', boxShadow: '0 2px 12px rgba(26,43,74,0.18)' }}>
+            <span className="font-sans text-xs uppercase tracking-[0.25em] font-semibold" style={{ color: '#8AC63F' }}>Show</span>
+            <span className="w-px h-3 inline-block" style={{ background: 'rgba(255,255,255,0.25)' }} />
+            <span className="font-display font-bold text-sm tracking-wide" style={{ color: '#FFFFFF' }}>NSE / IMMA</span>
+          </div>
         </div>
 
         {/* Gallery grid using Masonry layout */}

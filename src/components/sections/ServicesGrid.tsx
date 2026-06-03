@@ -7,38 +7,38 @@ import { IconArrowRight } from '@tabler/icons-react';
 const SERVICES = [
   {
     svg: '/event-services/exhibition-shell-scheme-solutions.svg',
-    title: 'Exhibition Shell Scheme Solutions',
-    desc: 'Standard and customized booth construction for trade shows and exhibitions.',
+    title: 'Custom Stall Design & Fabrication',
+    desc: 'Fully customized exhibition stalls designed and fabricated to your brand specifications — from concept to on-site build.',
     color: '#2B9E7C',
-  },
-  {
-    svg: '/event-services/premium-furniture-rental.svg',
-    title: 'Premium Furniture Rental',
-    desc: 'Modern and elegant furniture solutions for exhibition stands, conferences, and events.',
-    color: '#3BA882',
-  },
-  {
-    svg: '/event-services/carpeting-services.svg',
-    title: 'Carpeting Services',
-    desc: 'High-quality flooring and carpeting options in a variety of colors and finishes.',
-    color: '#52B48A',
   },
   {
     svg: '/event-services/branding-graphics.svg',
     title: 'Branding & Graphics',
-    desc: 'Customized branding, signage, vinyl graphics, backdrops, and promotional displays.',
+    desc: 'Large-format printing, vinyl graphics, LED-lit backdrops, signage, and promotional displays that make your stall unmissable.',
+    color: '#3BA882',
+  },
+  {
+    svg: '/event-services/product-display-solutions.svg',
+    title: 'Turnkey Projects',
+    desc: 'Complete end-to-end project delivery — design, fabrication, logistics, setup, and dismantling all under one roof.',
+    color: '#52B48A',
+  },
+  {
+    svg: '/event-services/carpeting-services.svg',
+    title: 'Carpeting Services',
+    desc: 'High-quality flooring and carpeting in a variety of colors, textures, and finishes to elevate your exhibition space.',
     color: '#6BBF92',
   },
   {
     svg: '/event-services/temporary-staffing.svg',
-    title: 'Temporary Staffing',
-    desc: 'Professional event staff, hostesses, promoters, registration personnel, and support teams.',
+    title: 'Project & Event Management',
+    desc: 'On-ground project managers and event coordinators ensuring flawless execution from pre-event planning to wrap-up.',
     color: '#82C93A',
   },
   {
-    svg: '/event-services/product-display-solutions.svg',
-    title: 'Product Display Solutions',
-    desc: 'Innovative display units and merchandising setups designed to showcase products effectively.',
+    svg: '/event-services/premium-furniture-rental.svg',
+    title: 'Conference Setup & Management',
+    desc: 'Complete conference room setups — furniture, AV, staging, and professional management for seamless events.',
     color: '#8AC63F',
   },
 ];

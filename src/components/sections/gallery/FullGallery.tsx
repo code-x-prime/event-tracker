@@ -33,6 +33,16 @@ export default function FullGallery() {
   return (
     <section className="bg-white py-14 md:py-20 px-6">
       <div className="max-w-7xl mx-auto">
+
+        {/* Header */}
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 mb-2 px-5 py-2 rounded-full" style={{ background: 'linear-gradient(135deg, #1A2B4A 0%, #0D1B30 100%)', boxShadow: '0 2px 12px rgba(26,43,74,0.18)' }}>
+            <span className="font-sans text-xs uppercase tracking-[0.25em] font-semibold" style={{ color: '#8AC63F' }}>Show</span>
+            <span className="w-px h-3 inline-block" style={{ background: 'rgba(255,255,255,0.25)' }} />
+            <span className="font-display font-bold text-sm tracking-wide" style={{ color: '#FFFFFF' }}>NSE / IMMA</span>
+          </div>
+        </div>
+
         <MasonryGrid columns={columns} gap={5}>
           {imagesList.map((src, idx) => (
             <GalleryCard

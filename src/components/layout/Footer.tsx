@@ -39,11 +39,12 @@ const QUICK_LINKS = [
 ];
 
 const SERVICES = [
-  'Custom Fabrications & Production',
-  'Auxiliary Area',
-  'Conference Services',
-  'Rental — AV & Furniture',
-  'Design & Layout',
+  'Custom Stall Design & Fabrication',
+  'Branding & Graphics',
+  'Turnkey Projects',
+  'Carpeting Services',
+  'Project & Event Management',
+  'Conference Setup & Management',
 ];
 
 const SOCIALS = [
@@ -53,10 +54,10 @@ const SOCIALS = [
 ];
 
 const CONTACT_ITEMS = [
-  { icon: MapPin, text: 'Mumbai, Maharashtra, India', href: null },
   { icon: Phone, text: '+91 95944 22056', href: 'tel:+919594422056' },
   { icon: Mail, text: 'info@eventtracker.in', href: 'mailto:info@eventtracker.in' },
   { icon: Globe, text: 'www.eventtracker.in', href: 'https://www.eventtracker.in' },
+  { icon: MapPin, text: 'Mumbai, Maharashtra, India', href: null },
 ];
 
 const colLabel = 'font-sans text-[0.6rem] font-semibold uppercase tracking-[0.22em] mb-5 block';

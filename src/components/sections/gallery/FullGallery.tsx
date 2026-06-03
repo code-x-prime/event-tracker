@@ -3,11 +3,10 @@
 import { useState, useEffect } from 'react';
 import { IconMaximize } from '@tabler/icons-react';
 import { ImageLightbox } from '@/components/ui/ImageLightbox';
-import { GALLERY_SHOWS } from '@/lib/image-index';
+import { GALLERY_IMAGES } from '@/lib/image-index';
 import { MasonryGrid } from '@/components/ui/image-testimonial-grid';
 
 export default function FullGallery() {
-  const [activeTab, setActiveTab] = useState(0);
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
   const [columns, setColumns] = useState(3);
 
@@ -24,15 +23,12 @@ export default function FullGallery() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const show = GALLERY_SHOWS[activeTab];
-  const images = show.images;
-
   return (
     <section className="bg-white py-12 md:py-16 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-10">
           <p className="font-sans text-xs uppercase tracking-[0.3em] mb-2" style={{ color: '#2B9E7C' }}>
             Portfolio
           </p>
@@ -44,62 +40,17 @@ export default function FullGallery() {
           </p>
         </div>
 
-        {/* Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-          {GALLERY_SHOWS.map((s, i) => {
-            const isActive = i === activeTab;
-            return (
-              <button
-                key={s.id}
-                onClick={() => { setActiveTab(i); setLightboxIdx(null); }}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-sans text-sm font-semibold transition-all duration-200"
-                style={{
-                  background: isActive
-                    ? 'linear-gradient(135deg,#1A2B4A,#0D1B30)'
-                    : '#fff',
-                  color: isActive ? '#fff' : '#555',
-                  border: isActive ? 'none' : '1.5px solid #E2EAE2',
-                  boxShadow: isActive ? '0 2px 12px rgba(26,43,74,0.18)' : 'none',
-                }}
-              >
-                {isActive && (
-                  <span
-                    className="font-sans text-xs uppercase tracking-[0.2em] font-semibold"
-                    style={{ color: '#8AC63F' }}
-                  >
-                    Show
-                  </span>
-                )}
-                {s.label}
-                <span
-                  className="font-sans text-xs rounded-full px-2 py-0.5"
-                  style={{
-                    background: isActive ? 'rgba(255,255,255,0.15)' : '#F0F4F0',
-                    color: isActive ? '#8AC63F' : '#888',
-                  }}
-                >
-                  {s.images.length}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
         {/* Grid */}
         <MasonryGrid columns={columns} gap={6}>
-          {images.map((src, idx) => (
-            <GalleryCard
-              key={src}
-              src={src}
-              onClick={() => setLightboxIdx(idx)}
-            />
+          {GALLERY_IMAGES.map((src, idx) => (
+            <GalleryCard key={src} src={src} onClick={() => setLightboxIdx(idx)} />
           ))}
         </MasonryGrid>
       </div>
 
       {lightboxIdx !== null && (
         <ImageLightbox
-          images={images}
+          images={GALLERY_IMAGES}
           initialIndex={lightboxIdx}
           onClose={() => setLightboxIdx(null)}
         />

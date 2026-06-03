@@ -17,7 +17,7 @@ const STATS = [
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden text-center px-6"
+      className="relative min-h-[100svh] flex flex-col items-center justify-center overflow-hidden text-center px-4 md:px-5"
       style={{ background: '#0a1a12' }}
     >
       <style>{`
@@ -71,7 +71,7 @@ export default function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto w-full py-32 flex flex-col items-center">
+      <div className="relative z-10 max-w-5xl mx-auto w-full py-12 md:py-16 flex flex-col items-center">
 
         {/* ① Eyebrow badge */}
         <div
@@ -82,7 +82,7 @@ export default function HeroSection() {
           }}
         >
           <span
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
+            className="inline-flex items-center gap-2 px-2 md:px-4 py-2 rounded-full mb-3 md:mb-6 whitespace-nowrap"
             style={{
               border: '1px solid rgba(255,255,255,0.2)',
               background: 'rgba(255,255,255,0.05)',
@@ -98,7 +98,7 @@ export default function HeroSection() {
             />
             <IconBuildingStore size={14} color="rgba(255,255,255,0.7)" />
             <span
-              className="font-sans text-xs uppercase tracking-widest"
+              className="font-sans text-[10px] uppercase tracking-wide"
               style={{ color: 'rgba(255,255,255,0.7)' }}
             >
               Mumbai&apos;s #1 Exhibition Infrastructure Partner
@@ -115,11 +115,11 @@ export default function HeroSection() {
           }}
         >
           <h1 className="font-display font-bold leading-tight mb-6">
-            <span className="block text-white text-3xl md:text-5xl lg:text-6xl">
+            <span className="block text-white text-2xl md:text-5xl lg:text-6xl">
               Transforming Spaces Into
             </span>
             <span
-              className="block text-3xl md:text-5xl lg:text-6xl"
+              className="block text-2xl md:text-5xl lg:text-6xl"
               style={{
                 background: 'linear-gradient(90deg,#2B9E7C,#8AC63F)',
                 WebkitBackgroundClip: 'text',
@@ -141,7 +141,7 @@ export default function HeroSection() {
           }}
         >
           <p
-            className="font-sans text-lg leading-relaxed max-w-2xl mx-auto mb-10"
+            className="font-sans text-[13px] md:text-lg leading-relaxed max-w-2xl mx-auto mb-8"
             style={{ color: 'rgba(255,255,255,0.6)' }}
           >
             Event Tracker delivers end-to-end exhibition setup — shell schemes, furniture,
@@ -151,7 +151,7 @@ export default function HeroSection() {
 
         {/* ④ CTA Buttons */}
         <div
-          className="flex flex-wrap gap-4 justify-center mb-16"
+          className="flex flex-col sm:flex-row gap-3 items-center justify-center mb-10 w-full max-w-[280px] sm:max-w-none mx-auto"
           style={{
             animation: 'slideUp 0.6s ease forwards',
             animationDelay: '450ms',
@@ -160,7 +160,7 @@ export default function HeroSection() {
         >
           <Link
             href="/services"
-            className="hero-btn-primary inline-flex items-center gap-2 font-sans font-semibold text-sm text-white rounded-full px-8 py-4 transition-all duration-300 hover:scale-105"
+            className="hero-btn-primary inline-flex items-center justify-center gap-2 font-sans font-semibold text-sm text-white rounded-full py-3 px-4 md:px-8 md:py-4 w-full sm:w-auto transition-all duration-300 hover:scale-105"
             style={{
               background: 'linear-gradient(90deg,#2B9E7C,#8AC63F)',
               boxShadow: '0 0 0 rgba(43,158,124,0)',
@@ -180,7 +180,7 @@ export default function HeroSection() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 font-sans font-semibold text-sm text-white rounded-full px-8 py-4 transition-all duration-300 hover:bg-white/10"
+            className="inline-flex items-center justify-center gap-2 font-sans font-semibold text-sm text-white rounded-full py-3 px-4 md:px-8 md:py-4 w-full sm:w-auto transition-all duration-300 hover:bg-white/10"
             style={{ border: '1.5px solid rgba(255,255,255,0.3)' }}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.6)';
@@ -196,7 +196,7 @@ export default function HeroSection() {
 
         {/* ⑤ Stats strip */}
         <div
-          className="w-full max-w-2xl mx-auto pt-8 border-t flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-0"
+          className="w-full max-w-2xl mx-auto pt-4 md:pt-8 border-t flex flex-row items-center justify-center gap-8 sm:gap-0"
           style={{
             borderColor: 'rgba(255,255,255,0.1)',
             animation: 'slideUp 0.6s ease forwards',
@@ -214,7 +214,7 @@ export default function HeroSection() {
               )}
               <div className="text-center flex-1 sm:flex-none">
                 <span
-                  className="block font-display text-3xl font-bold"
+                  className="block font-display text-xl md:text-3xl font-bold"
                   style={{
                     background: 'linear-gradient(90deg,#2B9E7C,#8AC63F)',
                     WebkitBackgroundClip: 'text',
@@ -225,7 +225,7 @@ export default function HeroSection() {
                   {number}
                 </span>
                 <span
-                  className="font-sans text-xs uppercase tracking-wider"
+                  className="font-sans text-[10px] md:text-xs uppercase tracking-wide"
                   style={{ color: 'rgba(255,255,255,0.5)' }}
                 >
                   {label}

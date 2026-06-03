@@ -47,7 +47,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center select-none">
             <Image
-              src={scrolled ? "/logo.png" : "/logo-b.png"}
+              src={scrolled ? "/logo.png" : "/Logo-b.png"}
               alt="Event Tracker"
               width={140}
               height={52}

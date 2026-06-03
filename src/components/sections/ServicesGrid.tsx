@@ -7,7 +7,7 @@ import { IconArrowRight } from '@tabler/icons-react';
 const SERVICES = [
   {
     svg: '/event-services/exhibition-shell-scheme-solutions.svg',
-    title: 'Exhibition Shell Scheme Solutions',
+    title: 'Event Infrastructure (Shell Scheme)',
     desc: 'Standard and customized booth construction for trade shows and exhibitions — modular, fast, and professional.',
     color: '#2B9E7C',
   },

@@ -10,8 +10,6 @@ import {
   IconSend,
   IconCircleCheck,
   IconBrandInstagram,
-  IconBrandLinkedin,
-  IconBrandFacebook,
 } from '@tabler/icons-react';
 
 const SERVICES = [
@@ -327,28 +325,39 @@ export default function ContactMain() {
                 Follow Us
               </p>
               <div className="flex items-center gap-3">
-                {[IconBrandInstagram, IconBrandLinkedin, IconBrandFacebook].map((Icon, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200"
-                    style={{ border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.6)' }}
-                    onMouseEnter={(e) => {
-                      const el = e.currentTarget as HTMLAnchorElement;
-                      el.style.background = 'linear-gradient(135deg,#2B9E7C,#8AC63F)';
-                      el.style.borderColor = 'transparent';
-                      el.style.color = '#fff';
-                    }}
-                    onMouseLeave={(e) => {
-                      const el = e.currentTarget as HTMLAnchorElement;
-                      el.style.background = 'transparent';
-                      el.style.borderColor = 'rgba(255,255,255,0.15)';
-                      el.style.color = 'rgba(255,255,255,0.6)';
-                    }}
-                  >
-                    <Icon size={16} />
-                  </a>
-                ))}
+                <a
+                  href="https://www.instagram.com/eventtracker.mumbai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200"
+                  style={{ border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.6)' }}
+                  onMouseEnter={(e) => {
+                    const el = e.currentTarget as HTMLAnchorElement;
+                    el.style.background = 'linear-gradient(135deg,#2B9E7C,#8AC63F)';
+                    el.style.borderColor = 'transparent';
+                    el.style.color = '#fff';
+                  }}
+                  onMouseLeave={(e) => {
+                    const el = e.currentTarget as HTMLAnchorElement;
+                    el.style.background = 'transparent';
+                    el.style.borderColor = 'rgba(255,255,255,0.15)';
+                    el.style.color = 'rgba(255,255,255,0.6)';
+                  }}
+                >
+                  <IconBrandInstagram size={16} />
+                </a>
+                <a
+                  href="https://www.instagram.com/eventtracker.mumbai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-sans text-sm transition-colors duration-200"
+                  style={{ color: 'rgba(255,255,255,0.6)' }}
+                  onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = '#8AC63F')}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.6)')}
+                >
+                  @eventtracker.mumbai
+                </a>
               </div>
             </div>
           </div>

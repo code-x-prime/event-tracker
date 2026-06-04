@@ -16,7 +16,7 @@ const SERVICES = [
       'Modular panels, tables & chair setups',
       'Speedy assembly & dismantling support',
     ],
-    img: '/services/temporary-staffing.jpg',
+    img: '/services/service-1.jpeg',
     color: '#2B9E7C',
   },
   {
@@ -30,7 +30,7 @@ const SERVICES = [
       'Double-storey & island stalls',
       'On-site build, dressing & dismantling',
     ],
-    img: '/services/custom-stall-design-fabrication.jpeg',
+    img: '/services/service-2.jpeg',
     color: '#2BA896',
   },
   {
@@ -44,7 +44,7 @@ const SERVICES = [
       'LED-lit backdrops & signage',
       'Custom promotional displays',
     ],
-    img: '/services/branding-graphics.jpg',
+    img: '/services/service-3.jpeg',
     color: '#3BA882',
   },
   {
@@ -58,7 +58,7 @@ const SERVICES = [
       'On-site setup & supervision',
       'Dismantling & storage solutions',
     ],
-    img: '/services/product-display-solutions.jpg',
+    img: '/services/service-4.jpeg',
     color: '#52B48A',
   },
   {
@@ -72,7 +72,7 @@ const SERVICES = [
       'Anti-slip underlay included',
       'Quick installation & removal',
     ],
-    img: '/services/carpeting-services.jpg',
+    img: '/services/service-5.jpeg',
     color: '#6BBF92',
   },
   {
@@ -86,7 +86,7 @@ const SERVICES = [
       'Podiums, panels & signage',
       'Full event-day management',
     ],
-    img: '/services/premium-furniture-rental.jpg',
+    img: '/services/service-6.jpeg',
     color: '#8AC63F',
   },
 ];

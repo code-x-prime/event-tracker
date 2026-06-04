@@ -126,7 +126,7 @@ export default function ServicesDetailed() {
                 {/* Visual card */}
                 <div
                   className="relative overflow-hidden rounded-[20px]"
-                  style={{ minHeight: 320 }}
+                  style={{ minHeight: 400 }}
                 >
                   <Image
                     src={img}

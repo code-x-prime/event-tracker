@@ -4,9 +4,9 @@ const CARDS = [
   {
     icon: IconPhone,
     title: 'Call Us',
-    value: '+91 95944 22056',
+    value: '+91 82919 06056',
     sub: 'Mon–Sat, 9 AM – 7 PM',
-    href: 'tel:+919594422056',
+    href: 'tel:+918291906056',
   },
   {
     icon: IconMail,

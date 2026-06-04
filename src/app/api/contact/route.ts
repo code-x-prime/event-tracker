@@ -171,7 +171,7 @@ function thankYouHTML(name: string) {
                 <table cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="center" style="padding:0 12px;border-right:1px solid #E2EAE2;">
-                      <a href="tel:+919594422056" style="font-size:15px;font-weight:700;color:#2B9E7C;text-decoration:none;white-space:nowrap;">+91 95944 22056</a>
+                      <a href="tel:+918291906056" style="font-size:15px;font-weight:700;color:#2B9E7C;text-decoration:none;white-space:nowrap;">+91 82919 06056</a>
                     </td>
                     <td align="center" style="padding:0 12px;">
                       <a href="mailto:info@eventtracker.in" style="font-size:15px;font-weight:700;color:#2B9E7C;text-decoration:none;white-space:nowrap;">info@eventtracker.in</a>

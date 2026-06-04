@@ -30,7 +30,7 @@ const SERVICES = [
       'Double-storey & island stalls',
       'On-site build, dressing & dismantling',
     ],
-    img: '/services/exhibition-shell-scheme-solutions.jpg',
+    img: '/services/custom-stall-design-fabrication.jpeg',
     color: '#2BA896',
   },
   {

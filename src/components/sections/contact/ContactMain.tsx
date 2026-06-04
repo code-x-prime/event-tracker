@@ -36,7 +36,7 @@ const VENUES = [
 ];
 
 const CONTACT_ITEMS = [
-  { icon: IconPhone, label: 'Phone', value: '+91 95944 22056', href: 'tel:+919594422056' },
+  { icon: IconPhone, label: 'Phone', value: '+91 82919 06056', href: 'tel:+918291906056' },
   { icon: IconMail, label: 'Email', value: 'info@eventtracker.in', href: 'mailto:info@eventtracker.in' },
   { icon: IconWorld, label: 'Website', value: 'www.eventtracker.in', href: 'https://www.eventtracker.in' },
   { icon: IconMapPin, label: 'Location', value: 'Mumbai, Maharashtra, India', href: null },

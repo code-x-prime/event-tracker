@@ -15,7 +15,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Event Tracker | Exhibition & Event Infrastructure Mumbai',
   description:
-    "Event Tracker is Mumbai's trusted exhibition and event infrastructure company. Shell schemes, furniture rental, carpeting, branding, staffing and display solutions across India. Call +91 95944 22056.",
+    "Event Tracker is Mumbai's trusted exhibition and event infrastructure company. Shell schemes, furniture rental, carpeting, branding, staffing and display solutions across India. Call +91 82919 06056.",
   keywords:
     'exhibition setup Mumbai, shell scheme, furniture rental, event infrastructure, trade show booth, Event Tracker',
 };

@@ -6,7 +6,7 @@ import ContactInfoCards from '@/components/sections/contact/ContactInfoCards';
 export const metadata: Metadata = {
   title: 'Contact Us | Event Tracker — Exhibition & Event Infrastructure Mumbai',
   description:
-    'Get in touch with Event Tracker for exhibition setup, shell schemes, furniture rental, branding, and staffing services. Call +91 95944 22056 or email info@eventtracker.in.',
+    'Get in touch with Event Tracker for exhibition setup, shell schemes, furniture rental, branding, and staffing services. Call +91 82919 06056 or email info@eventtracker.in.',
 };
 
 export default function ContactPage() {
